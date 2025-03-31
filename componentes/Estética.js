@@ -1,6 +1,6 @@
 import { Text, StyleSheet, Image, ScrollView, SafeAreaView, ImageBackground } from 'react-native';
  
-export default function Gogo() {
+export default function Estética() {
 
   return (
 <SafeAreaView style={styles.container}>
@@ -13,7 +13,6 @@ export default function Gogo() {
  </ImageBackground>
  </SafeAreaView>
         
-
 
   );
 
@@ -48,4 +47,3 @@ const styles = StyleSheet.create({
 
 });
 
- 

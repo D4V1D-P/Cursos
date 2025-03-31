@@ -3,7 +3,7 @@ import { MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 import Home from './Home';
-import Gogo from './Gogo';
+import Tecnologia from './Tecnologia';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,10 +12,10 @@ export default function RotasTab() {
         <Tab.Navigator initialRouteName="Home" screenOptions={{ activeTintColor: "#00ff00" }}>
 
 <Tab.Screen 
-                name='Gogo' 
-                component={Gogo} 
+                name='Tecnologia' 
+                component={Tecnologia} 
                 options={{
-                    tabBarLabel: 'Gogo',
+                    tabBarLabel: 'Tecnologia',
                     tabBarIcon: ({ color, size }) => (
                         <AntDesign name="arrowleft" color={color} size={size} />
                     ),
