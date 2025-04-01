@@ -25,7 +25,7 @@ export default function RotasTab() {
                 name='Home' 
                 component={Home} 
                 options={{
-                    tabBarLabel: 'home',
+                    tabBarLabel: 'Home',
                     tabBarIcon: ({ color, size }) => (
                         <MaterialCommunityIcons name="home" color={color} size={size} />
                     ),
