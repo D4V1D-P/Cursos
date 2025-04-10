@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "nome": "Tecnologia da Informação",
+        "imagem": "img",
+        "cor": "white"
+    },
+    {
+        "id": 2,
+        "nome": "Gestão e Negócios",
+        "imagem": "img3",
+        "cor": "white"
+    },
+    {
+        "id": 3,
+        "nome": "Beleza e Estética",
+        "imagem": "img4",
+        "cor": "white"
+    },
+    {
+        "id": 4,
+        "nome": "Turismo e Hospitalidade",
+        "imagem": "img5",
+        "cor": "white"
+    }
+]
