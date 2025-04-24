@@ -28,9 +28,9 @@ const CursoCard = ({ curso }) => {
 
 export default function App() {
   return (
-    <ScrollView>
+    <>
       <View style={styles.container}>
-        <Text style={styles.titulo}>Cursos Técnico</Text>
+        <Text style={styles.titulo}>Cursos Técnicos</Text>
         <FlatList
           data={cursos}
           keyExtractor={(item) => item.id}
@@ -38,7 +38,7 @@ export default function App() {
           renderItem={({ item }) => <CursoCard curso={item} />}
         />
       </View>
-    </ScrollView>
+    </>
   );
 }
 
