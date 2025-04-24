@@ -1,0 +1,1 @@
+{"version":3,"file":"upload-request.d.ts","sourceRoot":"","sources":["../../../../../../src/api/upload/model/upload-request.tsx"],"names":[],"mappings":"AAAA,qBAAa,aAAa;IACxB,GAAG,EAAE,MAAM,CAAA;IACX,OAAO,EAAE,YAAY,GAAG,SAAS,CAAA;IAEjC,IAAI,EAAE,QAAQ,GAAG,SAAS,CAAA;gBAEd,GAAG,EAAE,MAAM,EAAE,OAAO,EAAE,YAAY,GAAG,SAAS,EAAE,IAAI,EAAE,QAAQ,GAAG,SAAS;CAKvF"}

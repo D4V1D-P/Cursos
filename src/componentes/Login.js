@@ -4,23 +4,23 @@ import {
   Text,
   SafeAreaView,
   StyleSheet,
-  Image,
   TextInput,
   TouchableOpacity,
 } from "react-native";
-
+ 
 import { Checkbox } from "react-native-paper";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./Firebase";
-
-
+ 
+ 
+ 
 export default function Login({ navigation }) {
   const [checked, setChecked] = useState(false);
-
+ 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
-
+ 
   const login = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, senha);
@@ -30,17 +30,10 @@ export default function Login({ navigation }) {
       alert("Erro ao fazer o login. Verifique suas credenciais.");
     }
   };
-
+ 
   return (
     <SafeAreaView style={estilo.container}>
-
-      <View style={estilo.logo}>
-        <Image
-          style={estilo.imgLogo}
-          source={require("./../../assets/SenacLogo.png")}
-        />
-      </View>
-
+ 
       <View style={estilo.areaInput}>
         <Text style={estilo.textoLabel}>E-mail:</Text>
         <TextInput
@@ -51,7 +44,7 @@ export default function Login({ navigation }) {
           value={email}
         />
       </View>
-
+ 
       <View style={estilo.areaInput}>
         <Text style={estilo.textoLabel}>Senha:</Text>
         <TextInput
@@ -60,12 +53,13 @@ export default function Login({ navigation }) {
           placeholder="Digite sua senha"
           onChangeText={setSenha}
           value={senha}
+          secureTextEntry={true}
         />
       </View>
-
+ 
       <View style={{ display: "flex"}}>
         <View style={estilo.esqueceuSenha}>
-          <View style={{display: "flex", gap: 5, flexDirection: "row", alignItems: "center"}}>
+          {/* <View style={{display: "flex", gap: 5, flexDirection: "row", alignItems: "center"}}>
             <Checkbox
               status={checked ? "checked" : "unchecked"}
               onPress={() => {
@@ -75,8 +69,8 @@ export default function Login({ navigation }) {
               <Text style={{ color: "#4f7afb", fontSize: 12 }}>
                 Lembrar usuário
               </Text>
-          </View>
-
+          </View> */}
+ 
           <TouchableOpacity
             onPress={() => navigation.navigate("RecuperarSenha")}
           >
@@ -92,17 +86,17 @@ export default function Login({ navigation }) {
           </TouchableOpacity>
         </View>
       </View>
-
+ 
       <TouchableOpacity style={estilo.button} onPress={login}>
         {error ? <Text style={estilo.error}>{error}</Text> : null}
         <Text style={estilo.buttonText}>Acessar</Text>
       </TouchableOpacity>
-
-      <TouchableOpacity><Text style={{ color: "#4f7afb", fontSize: 12, textDecorationLine: "underline" }}>Não tem conta? (Criar usuário)</Text></TouchableOpacity>
+ 
+      <TouchableOpacity onPress={() => navigation.navigate("Cadastro")}><Text style={{ color: "#4f7afb", fontSize: 12, textDecorationLine: "underline" }}>Não tem conta? (Criar usuário)</Text></TouchableOpacity>
     </SafeAreaView>
   );
 }
-
+ 
 const estilo = StyleSheet.create({
   container: {
     flex: 1,
@@ -125,8 +119,6 @@ const estilo = StyleSheet.create({
     display: "flex",
     gap: 5,
     flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
     marginLeft: -8,
   },
   titulo: {

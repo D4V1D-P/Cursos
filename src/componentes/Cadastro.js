@@ -1,19 +1,73 @@
-import { Text, StyleSheet, Image, SafeAreaView, TextInput, View, TouchableOpacity } from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+  TextInput,
+  View,
+  TouchableOpacity,
+  Alert,
+} from "react-native";
 import { useState } from "react";
-import { Checkbox } from "react-native-paper";
- 
-export default function Cadastro() {
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { setDoc, doc } from "firebase/firestore";
+import { auth, db } from "./Firebase";
 
+const Cadastro = ({ navigation }) => {
+  const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [error, setError] = useState("");
 
+  const handleCadastro = async () => {
+    if (!nome || !email || !senha) {
+      setError("Todos os campos são obrigatórios.");
+      return;
+    }
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        senha
+      );
+      const user = userCredential.user;
+
+      await setDoc(doc(db, "users", user.uid), {
+        nome,
+        telefone,
+      });
+
+      Alert.alert("Sucesso!", "Usuario cadastrado com sucesso!", [
+        { text: "OK", onPress: () => navigation.replace("MainTabs") },
+      ]);
+    } catch (err) {
+      Alert.alert("Erro", "Erro não foi possivel cadastrar. Tente novamente!");
+    }
+  };
+
   return (
-<SafeAreaView style={estilo.container}>
-      <View style={estilo.logo}>
-        <Image
-          style={estilo.imgLogo}
-          source={require("../assets/SenacLogo.png")}
+    <SafeAreaView style={estilo.container}>
+      <View style={estilo.areaInput}>
+        <Text style={estilo.textoLabel}>Nome:</Text>
+        <TextInput
+          style={estilo.textoinput}
+          placeholderTextColor={"#5a5a5a"}
+          placeholder="Nome de Usúario"
+          onChangeText={setNome}
+          value={nome}
+        />
+      </View>
+
+      <View style={estilo.areaInput}>
+        <Text style={estilo.textoLabel}>telefone:</Text>
+        <TextInput
+          style={estilo.textoinput}
+          placeholderTextColor={"#5a5a5a"}
+          placeholder="Telefone de contato"
+          onChangeText={setTelefone}
+          value={telefone}
         />
       </View>
 
@@ -36,21 +90,18 @@ export default function Cadastro() {
           placeholder="Digite sua senha"
           onChangeText={setSenha}
           value={senha}
+          secureTextEntry={true}
         />
       </View>
 
-      <TouchableOpacity style={estilo.button}>
+      <TouchableOpacity style={estilo.button} onPress={handleCadastro}>
         {error ? <Text style={estilo.error}>{error}</Text> : null}
         <Text style={estilo.buttonText}>Criar Usuário</Text>
       </TouchableOpacity>
-
     </SafeAreaView>
-        
-
   );
+};
 
-}
- 
 const estilo = StyleSheet.create({
   container: {
     flex: 1,
@@ -134,4 +185,4 @@ const estilo = StyleSheet.create({
   },
 });
 
-
+export default Cadastro;

@@ -9,13 +9,16 @@ import TelaPerfil from "./TelaPerfil"
 import Login from "./Login";
 import CursoDescricao from "./CursoDescricao";
 import Detalhes from "./Detalhes";
+import Cadastro from "./Cadastro";
+import Editarperfil from "./Editarperfil";
+import RecuperarSenha from "./RecuperarSenha";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator()
 
 function Tabs() {
   return (
-    <Tab.Navigator screenOptions={{ headerShown: true }}>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Home"
         component={Home}
@@ -44,10 +47,14 @@ export default function RotasTab() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: true }} initialRouteName="Login">
       <Stack.Screen name="MainTabs" component={Tabs} options={{ headerShown: false }} />
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Descricao" component={CursoDescricao} />
-      <Stack.Screen name="Detalhes" component={Detalhes} />
+      <Stack.Screen name="Login" component={Login}  options={{ headerShown: false }} />
+      <Stack.Screen name="Home" component={Home}  options={{ headerShown: false }} />
+      <Stack.Screen name="Descricao" component={CursoDescricao}  options={{ headerShown: false }} />
+      <Stack.Screen name="Detalhes" component={Detalhes}  options={{ headerShown: false }} />
+      <Stack.Screen name="Cadastro" component={Cadastro}  options={{ headerShown: false }} />
+      <Stack.Screen name="TelaPerfil" component={TelaPerfil}  options={{ headerShown: false }}/>
+      <Stack.Screen name="Editarperfil" component={Editarperfil}  options={{ headerShown: false }}/>
+      <Stack.Screen name="RecuperarSenha" component={RecuperarSenha}  options={{ headerShown: false }}/>
     </Stack.Navigator>
   )
 }

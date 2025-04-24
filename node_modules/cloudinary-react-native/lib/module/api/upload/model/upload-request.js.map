@@ -1,0 +1,1 @@
+{"version":3,"names":["UploadRequest","constructor","url","headers","data"],"sourceRoot":"../../../../../src","sources":["api/upload/model/upload-request.tsx"],"mappings":"AAAA,OAAO,MAAMA,aAAa,CAAC;EAMzBC,WAAWA,CAACC,GAAW,EAAEC,OAAiC,EAAEC,IAA0B,EAAE;IACtF,IAAI,CAACF,GAAG,GAAGA,GAAG;IACd,IAAI,CAACC,OAAO,GAAGA,OAAO;IACtB,IAAI,CAACC,IAAI,GAAGA,IAAI;EAClB;AACF","ignoreList":[]}

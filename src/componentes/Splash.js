@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import { ResizeMode, Video } from 'expo-av'; 
 import { hideAsync } from 'expo-router/build/utils/splash';
 
-export function Splash({ onComplete }) {
+export default function Splash({ onComplete }) {
     const [lastStatus, setStatus] = useState({});
     function onPlaybackStatusUpdate(status) {
         if (status.isLoaded) {  // Verifica se o vídeo foi carregado

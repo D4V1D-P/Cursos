@@ -1,0 +1,1 @@
+{"version":3,"names":["upload","unsignedUpload","uploadBase64","rename","explicit","UploadApiOptions"],"sourceRoot":"../../../../src","sources":["api/upload/index.tsx"],"mappings":"AAAA,SAASA,MAAM,EAAEC,cAAc,EAAEC,YAAY,EAAEC,MAAM,EAAEC,QAAQ,QAAQ,gBAAgB;AACvF,SAASC,gBAAgB,QAAQ,8BAA8B;AAE/D,SAASL,MAAM,EAAEC,cAAc,EAAEC,YAAY,EAAEC,MAAM,EAAEC,QAAQ;AAC/D,SAASC,gBAAgB","ignoreList":[]}
