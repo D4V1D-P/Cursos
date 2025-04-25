@@ -7,7 +7,7 @@ const imagem = {
   "img":  require('./../../assets/Games.jpeg'),
   "img3": require('../../assets/Gestao.jpg'),
   "img4": require('../../assets/Beleza.jpeg'),
-  "img5": require('../../assets/turismo.png')
+  "img5": require('../../assets/turismo.jpg'),
 }
 
 const CursoCard = ({ curso }) => {
