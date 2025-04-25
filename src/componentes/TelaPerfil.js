@@ -11,7 +11,6 @@ import {
 } from "react-native";
 
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 
 import { signOut } from "firebase/auth";

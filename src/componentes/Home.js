@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet, Image, ScrollView, View, FlatList, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, Image, View, FlatList, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import cursos from '../componentes/cursosCategoria.json'
 
@@ -7,7 +7,7 @@ const imagem = {
   "img":  require('./../../assets/Games.jpeg'),
   "img3": require('../../assets/Gestao.jpg'),
   "img4": require('../../assets/Beleza.jpeg'),
-  "img5": require('../../assets/turismo.png')
+  "img5": require('../../assets/turismo.jpg')
 }
 
 const CursoCard = ({ curso }) => {

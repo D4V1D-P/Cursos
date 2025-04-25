@@ -101,7 +101,7 @@ export default function Editarperfil() {
         <Text style={estilo.buttonText}>Atualizar</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={estilo.button}>
+      <TouchableOpacity style={estilo.button} onPress={() => navigation.navigate("MainTabs")}>
         <Text style={estilo.buttonText}>Cancelar</Text>
       </TouchableOpacity>
     </SafeAreaView>

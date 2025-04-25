@@ -8,7 +8,7 @@ const imagens = {
   "tecnologia1": require("../../assets/InformaticaparaInternet2.jpg"),
   "tecnologia2": require("../../assets/InformaticaparaInternet.jpg"),
   "tecnologia3": require("../../assets/JogosDigitais2.jpg"),
-  "Gestao": require("../../assets/TecnicoemAdministracao.png"),
+  "Gestao": require("../../assets/TecnicoemAdministracao.jpg"),
   "Gestao1": require("../../assets/tecnicoemcontabilidade.jpg"),
   "Gestao2": require("../../assets/TecnicoemRecursosHumanos.jpg"),
   "Gestao3": require("../../assets/TecnicoemLogistica.jpg"),

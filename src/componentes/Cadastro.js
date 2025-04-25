@@ -1,7 +1,6 @@
 import {
   Text,
   StyleSheet,
-  Image,
   SafeAreaView,
   TextInput,
   View,
