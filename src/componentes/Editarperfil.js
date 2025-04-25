@@ -63,7 +63,7 @@ export default function Editarperfil() {
       <Text style={estilo.titulo}>Editar Perfil</Text>
 
       <View style={estilo.areaInput}>
-        <Text style={estilo.textoLabel}>Nome: {nome}</Text>
+        <Text style={estilo.textoLabel}>Nome:</Text>
         <TextInput
           style={estilo.textoinput}
           placeholderTextColor={"#5a5a5a"}

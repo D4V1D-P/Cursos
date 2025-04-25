@@ -39,7 +39,7 @@ const Cadastro = ({ navigation }) => {
         telefone,
       });
 
-      Alert.alert("Sucesso!", "Usuario cadastrado com sucesso!", [
+      Alert.alert("Sucesso!", "Usuário cadastrado com sucesso!", [
         { text: "OK", onPress: () => navigation.replace("MainTabs") },
       ]);
     } catch (err) {

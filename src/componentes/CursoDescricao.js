@@ -8,11 +8,11 @@ const imagens = {
   "tecnologia1": require("../../assets/InformaticaparaInternet2.jpg"),
   "tecnologia2": require("../../assets/InformaticaparaInternet.jpg"),
   "tecnologia3": require("../../assets/JogosDigitais2.jpg"),
-  "Gestao": require("../../assets/TecnicoemAdministração.png"),
+  "Gestao": require("../../assets/TecnicoemAdministracao.png"),
   "Gestao1": require("../../assets/tecnicoemcontabilidade.jpg"),
   "Gestao2": require("../../assets/TecnicoemRecursosHumanos.jpg"),
-  "Gestao3": require("../../assets/TecnicoemLogística.jpg"),
-  "Beleza": require("../../assets/TecnicoemEstética.jpg"),
+  "Gestao3": require("../../assets/TecnicoemLogistica.jpg"),
+  "Beleza": require("../../assets/TecnicoemEstetica.jpg"),
   "Beleza2": require("../../assets/TecnicoemPodologia.jpg"),
   "Turismo": require("../../assets/TecnicoemEventos.jpg"),
   "Turismo1": require("../../assets/TecnicoemGuiaDeTurismo.jpg"),
@@ -62,8 +62,8 @@ const ItemCursos = ({ nome, imagem, tempo, compras, bolsas }) => {
       <Image source={source} style={estilo.fotos} />
       <Text style={estilo.nome}>{nome}</Text>
       <Text style={estilo.tempo}> {tempo}</Text>
-      <Text style={estilo.compras}>{compras}</Text>
-      <Text style={estilo.bolsas}>{bolsas}</Text>
+      <Text style={estilo.compras}>Comprar: {compras}</Text>
+      <Text style={estilo.bolsas}>Bolsas: {bolsas}</Text>
     </View>
   );
 };

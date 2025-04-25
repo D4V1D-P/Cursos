@@ -11,6 +11,8 @@ import {
 } from "react-native";
 
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 
 import { signOut } from "firebase/auth";
 import { auth } from "./Firebase";
@@ -160,7 +162,7 @@ export default function TelaPerfil() {
           }}
         >
           <View>
-            <MaterialIcons name="logout" size={20} color="#000" />
+            <FontAwesome5 name="user-edit" size={18} color="#000" />
           </View>
           <View style={{ display: "flex", gap: 7 }}>
             <Text style={estilo.configTitulo}>Editar Perfil</Text>
