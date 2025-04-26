@@ -50,7 +50,7 @@ export default function Editarperfil() {
         const docRef = doc(db, "users", user.uid);
         await updateDoc(docRef, { nome, email, telefone });
         alert("Sucesso, Dados atualizados com sucesso.");
-        navigation.replace("TelaPerfil");
+        navigation.replace("MainTabs");
       }
     } catch (error) {
       console.log(error);
